@@ -3,9 +3,7 @@ pipeline{
         label "none"
     }
     stages{
-        agent{
-                label "any"
-            }
+        agent any
         stage("test"){
             steps{
                 echo "========executing test ========"
