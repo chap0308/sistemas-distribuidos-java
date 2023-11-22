@@ -1,12 +1,11 @@
 pipeline{
-    agent{
-        label "none"
+  agent none
+  stages{
+    stage('test'){
+      agent any
+      steps{
+        sh "echo this is a test Jenkinsfile pipeline"
+      }
     }
-    stages{
-        stage("test"){
-            steps{
-                echo "========executing test ========"
-            }
-        }
-    }
+  }
 }
